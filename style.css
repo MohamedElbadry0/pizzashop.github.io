@@ -1,0 +1,966 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+
+.logo-container {
+  width: 70px; /* adjust the width and height to match the size of your logo */
+  height: 70px;
+  position: relative;
+}
+
+.logo-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotate 12s linear infinite; /* add the 'rotate' animation with infinite loop */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg); /* rotate the logo 360 degrees */
+  }
+}
+
+.content{
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 30px;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  height: 80px;
+  padding: 0 20px;
+
+}
+
+.logo-container img {
+  height: 75px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar-links li {
+  margin: 0 10px;
+}
+
+.navbar-links a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+      font-family: 'Nosifer', cursive; 	
+
+}
+
+.navbar-links a:hover {
+  color: red;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon__line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icon.active .menu-icon__line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-icon.active .menu-icon__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.active .menu-icon__line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+.banner {
+  background-image: url('pictures/pizza.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 6rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.banner1{
+  background: url("pictures/pizza1.jpg") no-repeat;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banner2 {
+  background-image: url('pictures/pizzza.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner2 h1 {
+  font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 6rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+.banner3{
+  background-image: url('pictures/pasta.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner3 h1 {
+  font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 6rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+.banner4{
+  background: url("pictures/about.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner4 h1 {
+  font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 6rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+.banner6{
+  background: url("pictures/store.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner6 h1 {
+  font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 6rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.banner5{
+  background: url("pictures/menu.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner5 h1 {
+  font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 6rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+.about{
+  padding: 10px 0;
+  text-align: center;
+font-size: 350%;
+  border: 5px solid gray;
+	text-align: center;
+	  border: 15px solid black;
+font-family: Copperplate, Papyrus, fantasy;}
+
+.about .title{
+  font-family: 'Neucha', cursive;  color: white; 
+  font-size: 100px;
+  font-weight: 700;
+}
+.about p{
+ font-family: 'Neucha', cursive;  color: white; 
+ padding-top: 20px;
+  text-align: justify;
+  font-family: Copperplate, Papyrus, fantasy;}
+
+.icon{
+  font-family: 'Neucha', cursive;  color: white; 
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1920px;
+
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+div.container1 {
+  text-align: center;
+  padding: 10px 20px;
+  background-image: url("pictures/flower.jpg");
+}
+div.container {
+  text-align: center;
+  padding: 20px 20px;
+}
+h5 {
+            color: black;
+			font-size: 40px;
+			font-weight: 900;
+			font-family: Verdana;
+        }
+		.newspaper {
+  column-count: 2;
+  column-gap: 100px;
+		}
+		/* Set font of all elements to 'Roboto' */
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+/* Remove outline of all elements on focus */
+*:focus {
+	outline: 0;
+}
+
+body {
+  background-image: url('pictures/pizza.jpg');
+	  color: grey;
+
+
+}
+
+h3 {
+	text-align: center;
+	  color: grey;
+
+}
+
+/* Add styles to 'container' class */
+.container {
+	padding: 12px 24px 24px 24px;
+	margin: 48px 12px;
+	background: #3f0000 ;
+	border-radius: 4px;
+}
+
+/* Add styles to 'label' selector */
+label {
+	font-size: 1em;
+	margin-left: 12px;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+	  color: grey;
+    resize: vertical;
+}
+
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus,input[type=email]:focus, textarea:focus {
+	border: 1px solid green;
+}
+
+/* Add styles to the submit button */
+input[type=submit] {
+	background: #000000;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+/* Add styles for 'focus' property */
+input[type=submit]:focus {
+	background: #A5D6A7;
+	color: whitesmoke;
+}
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+	background: #2196F3;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+	text-align: center;
+}
+
+.product {
+  background-color: #D3D3D3;
+  padding: 50px 0;
+}
+
+.product h2 {
+ font-family: 'Carter One', sans-serif;
+  color: black	; 
+  font-size: 4rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+
+
+.product .box-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product .box-container .box{
+  flex:5 1 20rem;
+  text-align: center;
+  padding:2rem;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.product .box-container .box img{
+  height: 20rem;
+}
+
+.product .box-container .box .discount{
+  position: absolute;
+  top:1rem; left: 1rem;
+  background:rgba(255, 0, 0, .1);
+  color:red;
+  padding:.7rem 1rem;
+  font-size: 2rem;
+}
+
+.product .box-container .box .icons{
+  position: absolute;
+  top:.5rem; right:-6rem;
+}
+
+.product .box-container .box:hover .icons{
+  right:1rem;
+}
+
+.product .box-container .box .icons a{
+  display: block;
+  height:3.5rem;
+  width:3.5rem;
+  line-height: 3.5rem;
+  font-size: 1.7rem;
+  color:var(--black);
+  background:rgba(0,0,0,.05);
+  border-radius: 50%;
+  margin-top: .7rem;
+}
+
+.product .box-container .box .icons a:hover{
+  background:var(--green);
+  color:#fff;
+}
+
+.product .box-container .box h3{
+ font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 2.5rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}
+
+
+
+.product .box-container .box .price{
+  font-size: 1.4rem;
+  color:white;
+  padding:.5rem 0;
+}
+
+.product .box-container .box .price span{
+  font-size: 1rem;
+  color:#999;
+  text-decoration: line-through;
+}
+
+.product .box-container .box .quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+    color:white;
+
+}
+
+.product .box-container .box .quantity span{
+  padding:0 .7rem;
+  font-size: 1.7rem;
+    color:white;
+
+}
+
+.product .box-container .box .quantity input{
+  border:.1rem solid rgba(0,0,0,.3);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color:white;
+  padding:.5rem;
+  background:rgba(0,0,0,.05);
+}
+
+.product .box-container .box .btn {
+  display: block;
+  background-color: white;
+  color: black;
+  padding: 15px 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.pizza {
+  padding: 10px 0;
+  text-align: center;
+font-size: 150%;
+  border: 5px solid gray;
+	text-align: center;
+	  border: 15px solid black;
+font-family: 'Permanent Marker', cursive;}
+
+
+.body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container1 {
+  padding: 64px;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  color: #FFF8DC	; 
+  font-size: 4rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #141212;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column2 {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row2 {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.fa {
+  padding: 50px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 4px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.contact-form {
+  background-color: #808080		;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Nosifer', cursive; 	display: block;
+
+}
+
+.contact-form label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.menu-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFF8DC;
+  
+
+}
+
+h1 {
+  font-family: 'Carter One', sans-serif;
+  color: black	; 
+  font-size: 4rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+}
+
+.menu-item {
+  display: flex;
+  margin: 20px 0;
+   font-family: 'Carter One', sans-serif;
+  color: black	; 
+  font-size: 1.2rem; 
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 100px #8b0000;
+}
+
+.menu-item img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.menu-item-info h2 {
+  margin-top: 0;
+}
+
+.menu-item-info p {
+  margin: 5px 0;
+}
+
+.price {
+ font-family: 'Carter One', sans-serif;
+  color: #FFF8DC	; 
+  font-size: 1.2rem; 
+  text-align: center;
+  text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #8b0000, 0 0 40px #8b0000, 0 0 70px #8b0000, 0 0 80px #8b0000, 0 0 100px #8b0000, 0 0 150px #8b0000;
+  animation: flicker 2s infinite alternate;
+}

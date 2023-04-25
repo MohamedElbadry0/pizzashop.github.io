@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="author" content="Mohamed Elbadry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The pizza shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+      <nav class="navbar">
+  <div class="logo-container">
+  <img src="pictures/logo.png" alt="Logo">
+  </div>
+  <ul class="navbar-links">
+    <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="merch.html">merch</a></li>
+        <li><a href="food.html">food&drinks </a></li>
+		<li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="menu-icon">
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+  </div>
+</nav>
+<div class="banner4">
+  <h1>About us </h1>
+ 
+</div>
+
+  <script>
+    const body = document.querySelector("body");
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+<div class="container1" style="background-color:black">
+  <div class="row1">
+    <div class="column-33">
+      <img src="pictures/pizza.png" alt="pizza" width="300" height="421">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Want to hear our story?</b></h1>
+      <h1 class="large-font" style="color:#990000;"><b>once upon a time.</b></h1>
+      <span style="font-size:24px">The creation of the pizza shop. </span> 
+	  <p>In 2001 the pizza shop was a pizzeria in Milano owned by,chef Moustafa Elbadry, it wa scalled fly pizza back in the days</p>
+	  <p>By 2009 he had had enough and asked his friend MO if he wanted to be a partner and open branches in the UK.</p>
+	  <p>By 2011 the two friends had there first restaurant in London and named it the pizza shop.</p>
+	  <p>By 2015 the two chiefs opened there first resturant in Edinburgh right in the centre and slowly it became a landmark.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container1" style="background-color:black">
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Our passions</b></h1>
+      <h1 class="large-font" style="color:#990000;"><b>bringing Italian pizza to your door</b></h1>
+          <span style="font-size:35px">What about us?. </span> 
+	  <p>Bringing a dining table to life with great food, great music</p>
+	  <p>and great company. Lifting glasses and spirits. Getting</p>
+	  <p>smiles on faces and sauce on t-shirts. That's what we're all about.</p>
+	  <p>Fill your stomach without emptying your pockets with our money-saving partnership offers..</p>
+    </div>
+    <div class="column-33">
+        <img src="pictures/pizza1.png" alt="kit" width="335" height="471" >
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="column">
+    <div class="card">
+      <img src="pictures/chef2.jpg" alt="chef" style="width:90%">
+      <div class="container">
+        <h2>Chef Muss</h2>
+        <p class="title">Chef and co founder</p>
+        <p>the founder and the owner of the resturant.</p>
+        <p>muss@gmail.com</p>
+        <p><button class="button">get in touch</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="pictures/chef1.jpg" alt="chef" style="width:90%">
+      <div class="container">
+        <h2>Chef Mo</h2>
+        <p class="title">Chef and co founder</p>
+        <p>the co founder of the resturant.</p>
+        <p>mo@gmail.com</p>
+        <p><button class="button">get in touch</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="pictures/chef.jpg" alt="chef" style="width:90%">
+      <div class="container">
+        <h2>Sayed El</h2>
+        <p class="title">Chef and manager</p>
+        <p>the general manager to all the branches in the UK.</p>
+        <p>sayed@gmail.com</p>
+        <p><button class="button">get in touch</button></p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<div class="footer">
+	<h6>Copyright ©2023 THE PIZZA SHOP
+All Rights Reserved.</h6>
+
+<h6> Please note that legal information, including legal templates and legal policies, is not legal advice. The information provided on this site is not legal advice, does not constitute a lawyer referral service, and no attorney-client or confidential relationship is or will be formed by use of the site.
+
+The reproduction, distribution, display, or transmission of the content is strictly prohibited, unless authorized by The pizza shop. All other company & product names may be trademarks of the respective companies with which they are associated.</h6>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="author" content="Mohamed Elbadry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The pizza shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <nav class="navbar">
+  <div class="logo-container">
+  <img src="pictures/logo.png" alt="Logo">
+  </div>
+  <ul class="navbar-links">
+    <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="merch.html">merch</a></li>
+        <li><a href="food.html">food&drinks </a></li>
+		<li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="menu-icon">
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+  </div>
+</nav>
+  
+<div class="banner2">
+  <h1>Contact us</h1>
+  </div>
+  <script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+	const form = document.getElementById('contact');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const name = form.querySelector('input[type="text"]').value;
+  const email = form.querySelector('input[type="email"]').value;
+  const message = form.querySelector('textarea').value;
+  console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+  form.reset();
+});
+  </script>
+  
+<div class="contact-form">
+  <h2>Contact Us</h2>
+  <form id="contact" action="#" method="post">
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name" required>
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email" required>
+    <label>Message</label>
+    <textarea placeholder="Enter your message" required></textarea>
+    <input type="submit" value="Send">
+  </form>
+	<h2>Or you can contact us on our social media accounts</h2>
+
+<a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.google.co.uk/" class="fa fa-google"></a>
+</div>	 
+
+<div class="footer">
+	<h6>Copyright ©2023 THE PIZZA SHOP
+All Rights Reserved.</h6>
+
+<h6> Please note that legal information, including legal templates and legal policies, is not legal advice. The information provided on this site is not legal advice, does not constitute a lawyer referral service, and no attorney-client or confidential relationship is or will be formed by use of the site.
+
+The reproduction, distribution, display, or transmission of the content is strictly prohibited, unless authorized by The pizza shop. All other company & product names may be trademarks of the respective companies with which they are associated.</h6>
+</div>
+</body>
+</html> 

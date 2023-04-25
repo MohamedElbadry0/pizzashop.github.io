@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="author" content="Mohamed Elbadry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>The pizza shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+      <nav class="navbar">
+  <div class="logo-container">
+  <img src="pictures/logo.png" alt="Logo">
+  </div>
+  <ul class="navbar-links">
+    <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="merch.html">merch</a></li>
+        <li><a href="food.html">food&drinks </a></li>
+		<li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="menu-icon">
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+  </div>
+</nav>
+
+<div class="banner">
+  <h1>Only £10 for take out </h1>
+ 
+</div>
+
+
+<div class="container1" style="background-color:black">
+  <div class="row1">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b1>SOURDOUGH PIZZA</b1></h1>
+      <h1 class="large-font" style="color:red;"><b>As it should be!</b></h1>
+      <p><span style="font-size:36px">Our dough</span> is made fresh on site, our specials change daily and our prices start at just £5.95. Vegan & gluten free options are also available.</p>
+      <button class="button" style="background-color:grey">Order NOW</button>
+    </div>
+    <div class="column-33">
+        <img src="pictures/pizzas.png" alt="pizzas" width="335" height="471">
+    </div>
+  </div>
+</div>
+
+<div class="container1" style="background-color:black">
+  <div class="row1">
+    <div class="column-33">
+      <img src="pictures/uber.png" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Delivery?</b></h1>
+      <h1 class="large-font" style="color:red;"><b>Yes! we are the fastest delivery in the city.</b></h1>
+      <p><span style="font-size:24px">Food you never knew you wanted. </span> Food you did. Order from The pizza shop on UberEats. Your favourite pizza place available on UberEats. Order now! Local Restaurant.</p>
+      <button class="button" style="background-color:grey">What are you waiting for?</button>
+    </div>
+  </div>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="pictures/pizza1.jpg" alt="pizza" style="width:100%">
+  <div class="text">wood fire oven</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="pictures/pizza2.jpg" alt="pizza" style="width:100%">
+  <div class="text">Best napoletan pizza in the city</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+<img src="pictures/edinburgh.jpg" alt="pizza" style="width:100%">
+  <div class="text">in the heart of Edinburgh</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+<script>
+
+    const body = document.querySelector("body");
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  
+  // JavaScript code to toggle the navbar on small screens
+ const menuIcon = document.querySelector('.menu-icon');
+const navbarLinks = document.querySelector('.navbar-links');
+
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.toggle('active');
+  navbarLinks.classList.toggle('active');
+});
+
+
+}
+
+
+</script>
+
+<div class="pizza">
+<h2>A quick process of how we make our famous pizza</h2>
+<p>From creating dough balls to stretching and finaly ready to be eaten:</p>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="pictures/photo0.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pictures/photo1.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pictures/photo.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+<div class="footer">
+	<h6>Copyright ©2023 THE PIZZA SHOP
+All Rights Reserved.</h6>
+
+<h6> Please note that legal information, including legal templates and legal policies, is not legal advice. The information provided on this site is not legal advice, does not constitute a lawyer referral service, and no attorney-client or confidential relationship is or will be formed by use of the site.
+
+The reproduction, distribution, display, or transmission of the content is strictly prohibited, unless authorized by The pizza shop. All other company & product names may be trademarks of the respective companies with which they are associated.</h6>
+</div>
+</body>
+</html>
